@@ -1,0 +1,345 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+body {
+  display: flex;
+}
+
+main {
+  position: absolute;
+}
+/* section Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #422004d8;
+  padding: 20px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.logo img {
+  max-width: 100px;
+  height: auto;
+}
+.navbar a {
+  font-size: 18px;
+  color: bisque;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 35px;
+  transition: 0.3s;
+}
+.navbar a:hover,
+.navbar a.active {
+  color: #da6505;
+}
+
+.service {
+  display: flex;
+  justify-content: space-between;
+  width: 170px;
+}
+.service a {
+  color: bisque;
+  font-size: 20px;
+  border: 2px solid #c9630f;
+  border-radius: 50%;
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+}
+.top-page {
+  display: flex;
+  align-items: center;
+  height: 70vh;
+  padding: 0 10%;
+  color: #8d4205;
+  background-image: url(./img/Snapinsta.app_434739043_18316825054135675_2788699438352097841_n_1024.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.top-page-content {
+  justify-content: center;
+}
+
+h2 {
+  font-size: 56px;
+  font-weight: 800;
+}
+h3 {
+  font-size: 50px;
+  font-weight: 700;
+  color: #994602;
+}
+span {
+  color: #e2751c;
+}
+/* section Header */
+
+
+/* SECTION Unsere collection */
+.unsere-collection {
+  padding-top: 10px;
+  height: auto;
+}
+
+.best-produkt {
+  margin-top: 45px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(6, 120px);
+  gap: 10px;
+  column-gap: 10px;
+  row-gap: 10px;
+  height: 80vh;
+}
+.best-produkt img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s ease-out;
+}
+
+.best-produkt span {
+  color: #160b01;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 20px;
+}
+.div4,
+.div5,
+.div7 {
+  border: 1px solid #d39766;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ad652af6;
+}
+
+.div1 {
+  grid-area: 1 / 1 / 6 /3;
+}
+
+.div2 {
+  grid-area: 2 / 3 / 7 /5;
+}
+
+.div3 {
+  grid-area: 1 / 5 / 7 /6;
+}
+
+.div4 {
+  grid-area: 1 / 3 / 2 /5;
+}
+
+.div5 {
+  grid-area: 6 / 1 / 7 /3;
+}
+
+.div6 {
+  grid-area: 1 / 6 / 6 / 8;
+}
+
+.div7 {
+  grid-area: 6 / 6 / 7 / 8;
+}
+/* SECTION Unsere collection */
+
+
+/* Unser Empfehlung */
+
+.unser-empfehlung {
+  display: flex;
+  margin: 100px;
+  height: 500px;
+}
+
+.container{
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1000px;
+  height: 600px;
+  background:#d8a479;
+  box-shadow: 0 30px 50px #d8a479;
+}
+
+.container .slide .item{
+  width: 200px;
+  height: 300px;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  border-radius: 20px;
+  box-shadow: 0 20px 20px #d6833f;
+  background-position: 50% 50%;
+  background-size: cover;
+  display: inline-block;
+  transition: 0.5s;
+}
+.slide .item:nth-child(1),
+.slide .item:nth-child(2){
+  top: 0;
+  left: 0;
+  transform: translate(0,0);
+  border-radius: 0;
+  width: 100%;
+  height: 100%;
+}
+.slide .item:nth-child(3){
+  left: 50%;
+}
+.slide .item:nth-child(4){
+  left: calc(50% + 220px);
+}
+.slide .item:nth-child(5){
+  left: calc(50% + 440px);
+}
+.slide .item:nth-child(n + 6){
+  left: calc(50% + 660px);
+  opacity: 0;
+}
+
+.item .content{
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  width: 300px;
+  text-align: left;
+  color: #8d4205;
+  transform: translate(0, -50%);
+  font-family: 'poppins';
+  display: none;
+}
+.slide .item:nth-child(2) .content{
+  display: block;
+}
+
+.content .name{
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: bold;
+  opacity: 0;
+  animation: animate 1s ease-in-out 1 forwards;
+}
+
+.content .des{
+  margin-top: 10px;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: animate 1s ease-in-out 0.3s 1 forwards;
+}
+
+.content button{
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  animation: animate 1s ease-in-out 0.6s 1 forwards;
+}
+@keyframes animate{
+  from{
+    opacity: 0;
+    transform: translate(0, 100px);
+    filter: blur(33px);
+  }
+
+  to{
+    opacity: 1;
+    transform: translate(0);
+    filter: blur(0);
+  }
+
+}
+
+.button{
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 20px;
+}
+.button button{
+  width: 40px;
+  height: 35px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  margin: 0 5px;
+  border: 1px solid #8d4205;
+  transition: 0.3s;
+  background: transparent;
+}
+.button button:hover{
+  background: #d39766;
+  color: #8d4205;
+}
+ /* Unser Empfehlung */
+
+
+
+
+/* Section video beispiel */
+
+.video-bsp {
+  width: 100%;
+  display: flex;
+  padding: 0;
+  margin:0;
+  top: 50px;
+  height: 500px;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+} 
+.video{
+  text-align: center;
+}
+
+ .video a{
+  text-decoration: none;
+  display: inline-block;
+  color: #d8a479;
+  font-size: 24px;
+  border: 2px solid #8d4205;
+  padding: 10px 50px;
+  border-radius: 50px;
+  margin-top: 20px;
+ }
+.video a:hover {
+  color: #d8a479;
+  background: #994602;
+}
+.back-video {
+  width: 100%;
+  height: 500px;
+  margin: 10px;
+  object-fit:cover;
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  bottom: 0;
+}
+
+.video p{
+  font-size: 80px;
+  color: #ac703f;
+  font-weight: 400;
+  font-family: 'poppins';
+}
+/* Section video beispiel */
