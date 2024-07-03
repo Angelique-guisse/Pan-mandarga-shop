@@ -449,6 +449,7 @@ span {
 .contactform{
   width: 40%;
   padding: 40px;
+  border-radius: 10px;
   background: #f0c8a7;
 }
 .contactform h2{
